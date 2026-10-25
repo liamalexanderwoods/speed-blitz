@@ -1,0 +1,6 @@
+{
+  "name": "speed-blitz",
+  "compatibility_date": "2026-10-01",
+  // Serve index.html as a static asset; .assetsignore keeps the rest private
+  "assets": { "directory": "." }
+}
