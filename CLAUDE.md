@@ -4,15 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Speed Blitz is a 3D browser game. You are a superhero in Blitz City, a town full of people and cars. You can run at 200 mph, freeze time, speed blitz everyone nearby, and use super strength (punch, ground slam, lift and throw cars). The whole game is a single self-contained HTML file.
+Speed Blitz is a 3D browser game. You are a superhero in Blitz City, a town full of people and cars. You can run at 200 mph, freeze time, speed blitz everyone nearby, and use super strength (punch, ground slam, lift and throw cars). The whole game is a single self-contained HTML file, `index.html`.
 
 ## Running the Game
 
 ```
-open speed-blitz.html
+open index.html
 ```
 
 No build step. Three.js 0.160 (plus `BufferGeometryUtils`) loads from jsDelivr through an import map, so an internet connection is needed.
+
+## Deployment
+
+The repo is connected to the `speed-blitz` Cloudflare Worker, so pushing to `main` deploys it. `wrangler.jsonc` serves the directory as static assets, and `.assetsignore` keeps everything except `index.html` from being published. Add any new non-game file to `.assetsignore`.
 
 ## Architecture
 
